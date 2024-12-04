@@ -138,7 +138,7 @@ class ShoppingCart {
             cartItem.innerHTML = `
                 <img src="${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
                 <span>${item.nombre}</span>
-                <span>${item.precio} USD</span>
+                <span>${item.precio} BS.</span>
                 <span>Cantidad: ${item.quantity}</span>
             `;
             cartContainer.appendChild(cartItem);
@@ -147,7 +147,7 @@ class ShoppingCart {
         const totalContainer = document.getElementById('cart-total');
         if (totalContainer) {
             const total = this.cart.reduce((acc, item) => acc + item.precio * item.quantity, 0);
-            totalContainer.textContent = `Total: $${total.toFixed(2)}`;
+            totalContainer.textContent = `Total: ${total.toFixed(2)}Bs.`;
         }
     }
 }
